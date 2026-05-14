@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Visión Design | Alianzas para Salones</title>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">Visión Design</div>
-            <ul>
-                <li><a href="#portfolio">Proyectos</a></li>
-                <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="logo">VISIÓN <span>DESIGN</span></div>
     </header>
 
     <main>
         <section id="hero">
-            <h1>Potenciá tu Salón con Invitaciones de Última Generación</h1>
-            <p>Soluciones digitales exclusivas para salones de eventos.</p>
+            <section class="hero">
+            <h1 class="reveal">Transformá la Experiencia <br> de tu Salón</h1>
+            <p class="reveal">Invitaciones interactivas y herramientas digitales que generan rentabilidad sin carga operativa.</p>
+        </section>
         </section>
 
         <section id="portfolio">
@@ -29,10 +26,13 @@
             
             <div class="grid-proyectos">
                 <article class="proyecto-card">
-                    <img src="caratula-invitacion.jpg" alt="Invitación Web Premium">
-                    <h3>Invitación Web Interactiva</h3>
-                    <button class="open-modal" data-url="https://tu-demo.com/invitacion1">Ver Demo</button>
+                    <img src="/assets/portada estatica.jpg" alt="Invitación estatica">
+                    <h3>Invitación digital estatica</h3>
+                    <p>Diseño exclusivo optimizado para enviar por Whatsapp y redes sociales</p>
+                    <div class="card-actions">
+                    <button class="open-modal" data-url="/assets/portada estatica.jpg">Ver Demo</button>
                     <a href="https://wa.me/tunumero?text=Consulta-Promo-Invitacion1" class="btn-promo">Consultar Promoción</a>
+                    </div>
                 </article>
 
                 <article class="proyecto-card">
@@ -44,14 +44,42 @@
             </div>
         </section>
 
-        <section id="beneficios">
-            <h2>Beneficios para Salones</h2>
-            <ul>
-                <li><strong>Confirmación Instantánea:</strong> Control de invitados en tiempo real.</li>
-                <li><strong>Estética Premium:</strong> Diseños cinematic y glassmorphism.</li>
-                <li><strong>Margen Mayorista:</strong> Precios especiales para aliados.</li>
-            </ul>
-        </section>
+        <section id="beneficios" class="beneficios-container">
+    <div class="beneficios-header">
+        <h2>Unidad de Negocio para tu Salón</h2>
+        <p>Delegá la tecnología en expertos y sumá valor a tus eventos sin carga operativa.</p>
+    </div>
+
+    <div class="beneficios-grid">
+        <!-- 1. GANANCIA PASIVA -->
+        <div class="beneficio-item">
+            <div class="icon">📈</div>
+            <h3>Rentabilidad Sin Esfuerzo</h3>
+            <p>Generá ingresos extra con cada evento. Vos ofrecés el servicio como parte de tus packs, nosotros ejecutamos. Ganancia pasiva directa para el salón.</p>
+        </div>
+
+        <!-- 2. TIEMPO / DELEGACIÓN -->
+        <div class="beneficio-item">
+            <div class="icon">⏱️</div>
+            <h3>Cero Carga Operativa</h3>
+            <p>Olvidate de coordinar diseños o cambios. Nosotros nos encargamos de todo el proceso con el cliente final para que vos te enfoques en la gestión del salón.</p>
+        </div>
+
+        <!-- 3. LOGÍSTICA / RSVP -->
+        <div class="beneficio-item">
+            <div class="icon">📋</div>
+            <h3>Optimización de Recursos</h3>
+            <p>Con el sistema RSVP automático, sabrás el conteo exacto de invitados semanas antes. Menos desperdicio en catering y mejor organización del personal.</p>
+        </div>
+
+        <!-- 4. LA HERRAMIENTA (V-CARD CATÁLOGO) -->
+        <div class="beneficio-item">
+            <div class="icon">📱</div>
+            <h3>Herramienta de Venta QR</h3>
+            <p>Te brindamos un catálogo digital interactivo (V-Card) para tu recepción. El cliente escanea, se deslumbra con las opciones y cierra el contrato con vos.</p>
+        </div>
+    </div>
+</section>
 
         <section id="testimonios">
             <blockquote>
@@ -61,16 +89,47 @@
         </section>
     </main>
 
-    <div id="modal-container" class="modal">
+    <!-- <div id="modal-container" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <iframe src="" id="modal-iframe" frameborder="0"></iframe>
         </div>
+    </div> -->
+
+    <footer class="main-footer">
+    <div class="footer-cta">
+        <h2>Buscamos salones aliados para transformar la experiencia digital.</h2>
+        <p>Estamos lanzando nuestro programa de beneficios exclusivos. Formá parte de esta nueva etapa y llevá tus servicios al siguiente nivel.</p>
+        <!-- El botón destacado -->
+        <a href="https://wa.me/5491137878083?text=Hola!%20Quiero%20ser%20un%20Salon%20Aliado" class="btn-alianza">
+            Quiero ser un Salón Aliado
+        </a>
     </div>
 
-    <footer>
+    <div class="footer-bottom">
+        <div class="footer-info">
+            <span class="brand">Visión Design</span>
+            <p>Identidad Digital Interactiva | Mariano Acosta, Merlo.</p>
+        </div>
+        
+        <div class="footer-social">
+            <a href="https://www.behance.net/tu-perfil" target="_blank">Behance</a>
+            <a href="https://instagram.com/tu-perfil" target="_blank">Instagram</a>
+        </div>
+    </div>
+    
+    <div class="copyright">
         <p>&copy; 2026 Visión Design. Todos los derechos reservados.</p>
-    </footer> 
+    </div>
+</footer>
+
+<!-- Modal Container -->
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <button class="close-modal">&times;</button>
+            <iframe id="modal-iframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
