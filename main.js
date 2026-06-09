@@ -42,3 +42,36 @@ anime({
     loop: true,
     easing: 'easeInOutSine'
 });
+
+// seccion testimonios
+// Lógica del Carrusel de Testimonios
+const track = document.querySelector('.testimonios-track');
+const items = document.querySelectorAll('.testimonio-item');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let currentIndex = 0;
+const totalItems = items.length;
+
+function updateSlider() {
+    // Movemos la pista horizontalmente multiplicando el índice por -100
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+    if (currentIndex < totalItems - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0; // Vuelve al primero si llegó al final (bucle)
+    }
+    updateSlider();
+});
+
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = totalItems - 1; // Vuelve al último si tira para atrás en el primero
+    }
+    updateSlider();
+});

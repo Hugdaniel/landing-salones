@@ -191,24 +191,111 @@ body {
 
 /* Testimonios */
 #testimonios {
-    padding: 80px 5%;
+    padding: 100px 5%;
     text-align: center;
+    background: #030303;
 }
 
-blockquote {
-    font-size: 1.5rem;
+#testimonios h2 {
+    color: var(--accent);
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* Contenedor principal que alinea flechas y contenido */
+.testimonios-slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    gap: 20px;
+}
+
+/* La ventana que esconde los testimonios que no se están viendo */
+.testimonios-window {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* La pista horizontal que contiene todos los bloques */
+.testimonios-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+}
+
+/* Cada testimonio individual ocupa el 100% del ancho de la ventana */
+.testimonio-item {
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 20px 40px;
+    font-size: 1.4rem;
     font-style: italic;
     color: var(--text-dim);
-    max-width: 800px;
-    margin: 0 auto;
+    box-sizing: border-box;
 }
 
-cite {
+.testimonio-item p {
+    line-height: 1.6;
+}
+
+.testimonio-item cite {
     display: block;
-    margin-top: 20px;
+    margin-top: 25px;
     font-style: normal;
     color: var(--accent);
     font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Botones de las Flechas - Estilo Dark Premium */
+.slider-arrow {
+    background: var(--bg-card);
+    border: none;
+    /* border: 1px solid var(--glass-border); */
+    color: var(--text-main);
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    user-select: none;
+    z-index: 10;
+}
+
+.slider-arrow:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(212, 175, 55, 0.05);
+    transform: scale(1.1);
+}
+
+/* Ocultar flechas en celulares muy chicos si molestan, aunque con el gap de 20px van bien */
+@media (max-width: 600px) {
+    .testimonio-item {
+        font-size: 1.1rem;
+        padding: 10px 10px;
+    }
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
+
+
+.testimonio-item cite span {
+    font-weight: 300;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-left: 5px;
 }
 
 /* Modal Overlay */
