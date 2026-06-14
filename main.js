@@ -35,6 +35,7 @@ document.querySelector('.close-modal').onclick = () => {
     modal.style.display = 'none';
     iframe.src = '';
     modalImg.style.display = 'none';
+    modalImg.removeAttribute('src');
 };
 
 // 3. Animación "Latido" para el botón de Alianza
