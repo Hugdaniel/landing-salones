@@ -11,11 +11,14 @@ anime({
 // 2. Control del Modal
 const modal = document.getElementById('modal');
 const iframe = document.getElementById('modal-iframe');
+const modalImg = document.getElementById('modal-img');
 
 document.querySelectorAll('.open-modal').forEach(btn => {
     btn.onclick = function() {
         const url = this.getAttribute('data-url');
         iframe.src = url;
+        modalImg.src = url;
+        modalImg.style.display = 'block';
         modal.style.display = 'flex';
         
         anime({
@@ -31,6 +34,7 @@ document.querySelectorAll('.open-modal').forEach(btn => {
 document.querySelector('.close-modal').onclick = () => {
     modal.style.display = 'none';
     iframe.src = '';
+    modalImg.style.display = 'none';
 };
 
 // 3. Animación "Latido" para el botón de Alianza
