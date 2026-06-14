@@ -339,6 +339,14 @@ body {
     display: none; /* Se activa con JS */
 }
 
+/* oculta la imagen rota y el texto */
+#modal-img:not([src]),
+#modal-img[src=""] {
+    opacity: 0;
+    visibility: hidden;
+    display: none !important;
+}
+
 .close-modal {
     position: absolute;
     top: -50px;
